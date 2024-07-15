@@ -1,7 +1,7 @@
 {
   "name": "tank-vue3-seamless-scroll",
   "private": false,
-  "version": "1.0.16",
+  "version": "1.0.161",
   "type": "module",
   "main": "index.js",
   "engines": {

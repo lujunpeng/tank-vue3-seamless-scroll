@@ -145,8 +145,10 @@ onMounted(() => {
 onUnmounted(() => {
   t?.stop()
   tWatch?.stop()
-  ref_tank_seamless_scroll.value.removeEventListener("mouseover", onStop)
-  ref_tank_seamless_scroll.value.removeEventListener("mouseout", onPlay)
+  if (ref_tank_seamless_scroll.value) {
+    ref_tank_seamless_scroll.value.removeEventListener("mouseover", onStop)
+    ref_tank_seamless_scroll.value.removeEventListener("mouseout", onPlay)
+  }
 })
 </script>
 
