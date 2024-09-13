@@ -21,7 +21,7 @@
 </template>
 
 <script setup>
-import {onMounted, onUnmounted, nextTick, getCurrentInstance, ref} from "vue";
+import {onMounted, onUnmounted, onBeforeUnmount, nextTick, getCurrentInstance, ref} from "vue";
 import {timer} from "d3-timer";
 
 const loopCount = ref(new Array(5))
@@ -142,7 +142,7 @@ onMounted(() => {
       })
     }
 )
-onUnmounted(() => {
+onBeforeUnmount(() => {
   t?.stop()
   tWatch?.stop()
   if (ref_tank_seamless_scroll.value) {
